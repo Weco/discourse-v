@@ -28,6 +28,10 @@ export default {
 
             // Creates decorator for convert of v-qr code to real widgets
             api.decorateCooked($element => {
+                if (!$element) {
+                    return;
+                }
+
                 const isPreview = $element.hasClass('d-editor-preview');
 
                 $element
